@@ -1,0 +1,14 @@
+"use strict";
+
+function checkio(data) {
+    return data;
+}
+
+var assert = require('assert');
+
+if (!global.is_checking) {
+    assert.equal(checkio("hello,world", "hello,earth"), "hello", "Hello");
+    assert.equal(checkio("one,two,three", "four,five,six"), "", "Too different");
+    assert.equal(checkio("one,two,three", "four,five,one,two,six,three"), "one,three,two", "1 2 3");
+    console.log("Coding complete? Click 'Check' to review your tests and earn cool rewards!");
+}
