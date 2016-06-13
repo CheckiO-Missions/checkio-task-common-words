@@ -1,7 +1,7 @@
 "use strict";
 
-function checkio(data) {
-    return data;
+function checkio(first, second) {
+    return "";
 }
 
 var assert = require('assert');
