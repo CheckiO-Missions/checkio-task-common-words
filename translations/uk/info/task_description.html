@@ -1,5 +1,4 @@
-<img class="for_info_only" title="mirror" src="{{MEDIA}}mirror.png" alt="mirror"
-     style="width: 300px;float: left; margin-top: 10px; "/>
+<img class="for_info_only half" title="mirror" src="{{MEDIA}}mirror.png" alt="mirror" style="float: left;"/>
 
 
 <p>
@@ -15,22 +14,6 @@
     і відсортованими в <strong>алфавітному порядку.</strong>
 </p>
 
-<p>
-    <strong>Підказка: </strong> Ви з легкістю впораєтесь з цією задачею за допомогою декількох функцій:
-    {% if "python 2" in interpreter|lower %}
-    <a href="http://docs.python.org/2/library/stdtypes.html#str.split">str.split</a>,
-    <a href="http://docs.python.org/2/library/stdtypes.html#str.join">str.join</a> та
-    <a href="http://docs.python.org/2/library/functions.html#sorted">sorted</a>.
-    А також також спробуйте 
-    <a href="http://docs.python.org/2/library/stdtypes.html#set">set</a>.
-    {% else %}
-    <a href="http://docs.python.org/3/library/stdtypes.html#str.split">str.split</a>,
-    <a href="http://docs.python.org/3/library/stdtypes.html#str.join">str.join</a> та
-    <a href="http://docs.python.org/3/library/functions.html#sorted">sorted</a>.
-    А також також спробуйте
-    <a href="http://docs.python.org/3/library/stdtypes.html#set">set</a>.
-    {% endif %}
-</p>
 
 <p>
     <strong>Вхідні дані: </strong> Два аргументи у вигляді рядків (str).
@@ -67,10 +50,3 @@ checkio("one,two,three", "four,five,one,two,six,three") == "one,three,two"
 
 
 </p>
-<div class="facts for_info_only">
-    <p>
-        У світі CheckiO, ви можете досліджувати нові острови, виконувати завдання
-		та отримувати за це бали, які можуть бути використовані для відкриття нових островів. 
-        Ви знайдете більше, ніж 100 завдань, які вам треба буде ще виконати!
-    </p>
-</div>

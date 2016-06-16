@@ -1,5 +1,4 @@
-<img class="for_info_only" title="mirror" src="{{MEDIA}}mirror.png" alt="mirror"
-     style="width: 300px;float: left; margin-top: 10px; "/>
+<img class="for_info_only half" title="mirror" src="{{MEDIA}}mirror.png" alt="mirror" style="float: left;"/>
 
 
 <p>
@@ -14,24 +13,6 @@
     karakterláncban megtalálhatók. Az eredménynek is egy karakterláncnak kell 
     lennie, amely vesszőkkel elválasztott szavakból áll és 
     <strong>ábécérendbe</strong> van rendezve.
-</p>
-
-<p>
-    <strong>Megjegyzés: </strong> Könnyen meg lehet oldani ezt a feladatot a következő 
-    függvények segítségével:
-    {% if "python 2" in interpreter|lower %}
-    <a href="http://docs.python.org/2/library/stdtypes.html#str.split">str.split</a>,
-    <a href="http://docs.python.org/2/library/stdtypes.html#str.join">str.join</a> és
-    <a href="http://docs.python.org/2/library/functions.html#sorted">sorted</a>.
-    Továbbá tanulmányozza át a halmaz 
-    <a href="http://docs.python.org/2/library/stdtypes.html#set">set</a> adattípust.
-    {% else %}
-    <a href="http://docs.python.org/3/library/stdtypes.html#str.split">str.split</a>,
-    <a href="http://docs.python.org/3/library/stdtypes.html#str.join">str.join</a> és
-    <a href="http://docs.python.org/3/library/functions.html#sorted">sorted</a> adattípust.
-    Továbbá tanulmányozza át a halmaz
-    <a href="http://docs.python.org/3/library/stdtypes.html#set">set</a>.
-    {% endif %}
 </p>
 
 <p>
@@ -68,10 +49,3 @@ checkio("one,two,three", "four,five,one,two,six,three") == "one,three,two"
     Minden egyes szó vesszővel van elválasztva a másiktól.<br>
     Minden szó csak kisbetűs latin betűkből áll.
 </p>
-<div class="facts for_info_only">
-    <p>
-        A CheckiO világában Ön új szigeteket fedezhet fel, feladatokat oldhat meg, 
-        és a megoldásokért szerzett pontokat újabb sziketek felfedésére használhatja fel.
-        Több mint 100 feladat megoldása vár még Önre!
-    </p>
-</div>

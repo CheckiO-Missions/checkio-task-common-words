@@ -1,5 +1,4 @@
-<img class="for_info_only" title="mirror" src="{{MEDIA}}mirror.png" alt="mirror"
-     style="width: 300px;float: left; margin-top: 10px; "/>
+<img class="for_info_only half" title="mirror" src="{{MEDIA}}mirror.png" alt="mirror" style="float: left;"/>
 
 
 <p>
@@ -15,22 +14,6 @@
     порядке.</strong>
 </p>
 
-<p>
-    <strong>Замечания: </strong> Вы легко решите данную задачу при помощи нескольких функций:
-    {% if "python 2" in interpreter|lower %}
-    <a href="http://docs.python.org/2/library/stdtypes.html#str.split">str.split</a>,
-    <a href="http://docs.python.org/2/library/stdtypes.html#str.join">str.join</a> и
-    <a href="http://docs.python.org/2/library/functions.html#sorted">sorted</a>.
-    Также взгляните на тип данных -
-    <a href="http://docs.python.org/2/library/stdtypes.html#set">set</a>.
-    {% else %}
-    <a href="http://docs.python.org/3/library/stdtypes.html#str.split">str.split</a>,
-    <a href="http://docs.python.org/3/library/stdtypes.html#str.join">str.join</a> и
-    <a href="http://docs.python.org/3/library/functions.html#sorted">sorted</a>.
-    Также взгляните на тип данных -
-    <a href="http://docs.python.org/3/library/stdtypes.html#set">set</a>.
-    {% endif %}
-</p>
 
 <p>
     <strong>Вх. данные: </strong> Два аргумента как строки (str).
@@ -67,11 +50,3 @@ checkio("one,two,three", "four,five,one,two,six,three") == "one,three,two"
 
 
 </p>
-<div class="facts for_info_only">
-    <p>
-        В мире CheckiO, вы можете исследовать новые острова, решать задачи, а полученные за решения очки использовать для
-        открытия новых островов.
-        Вы найдете более 100 задач которые вам предстоит решить!
-
-    </p>
-</div>
