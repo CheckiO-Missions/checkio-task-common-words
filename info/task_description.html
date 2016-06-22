@@ -27,11 +27,15 @@
     <p>
         <strong>Example:</strong>
     </p>
-    <pre class="brush: python">
+    <pre class="brush: python">{% if interpreter.slug == "js-node" %}
+commonWords("hello,world", "hello,earth") == "hello"
+commonWords("one,two,three", "four,five,six") == ""
+commonWords("one,two,three", "four,five,one,two,six,three") == "one,three,two"
+{% else %}
 checkio("hello,world", "hello,earth") == "hello"
 checkio("one,two,three", "four,five,six") == ""
 checkio("one,two,three", "four,five,one,two,six,three") == "one,three,two"
-    </pre>
+{% endif %}</pre>
 </div>
 
 <p class="for_info_only">
