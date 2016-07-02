@@ -1,0 +1,53 @@
+<img class="for_info_only half" title="mirror" src="{{MEDIA}}mirror.png" alt="mirror" style="float: left;"/>
+
+
+
+<p>
+    Continuiamo ad esaminare parole. Ti vengono date due stringhe con parole separate da virgole.
+    Troviamo quali sono in comune tra le due stringhe. Le parole non sono ripetute all'interno delle stringhe.
+
+</p>
+
+<p>
+    La tua funzione deve trovare tutte le parole che compaiono in entrambe le stringhe.
+    Il risultato deve essere rappresentato com euna stringa di parole separate da virgole in <strong>ordine alfabetico.</strong>
+</p>
+
+
+<p>
+    <strong>Input: </strong> Due argomenti come stringhe.
+</p>
+
+<p>
+    <strong>Output: </strong> Le parole in comune come stringa.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Esempio:</strong>
+    </p>
+    <pre class="brush: python">{% if interpreter.slug == "js-node" %}
+commonWords("hello,world", "hello,earth") == "hello"
+commonWords("one,two,three", "four,five,six") == ""
+commonWords("one,two,three", "four,five,one,two,six,three") == "one,three,two"
+{% else %}
+checkio("hello,world", "hello,earth") == "hello"
+checkio("one,two,three", "four,five,six") == ""
+checkio("one,two,three", "four,five,one,two,six,three") == "one,three,two"
+{% endif %}</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Come si usa:</strong>
+    Puoi imparare come lavorare con stringhe ed insiemi.
+    Questa conoscenza pu&ograve; essere utile per l'analisi linguistica.
+</p>
+
+
+<p>
+    <strong>Prerequisiti: </strong><br>
+    Ogni stringa non contiene pi&ugrave; di 10 parole.<br>
+    Tutte le parole sono separate da virgole.<br>
+    Tutte le parole consistono di lettere latine minuscole
+</p>
