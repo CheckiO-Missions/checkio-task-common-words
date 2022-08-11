@@ -1,0 +1,95 @@
+<body data-author="bryukh">
+<div class="question-answer">
+    <div class="question">
+        Я не маю уявлення, як розв'язати цю місію.
+    </div>
+    <div class="answer">
+        Спершу ти повинен отримати окремі слова. Ти вже знаєш про <a href="http://docs.python.org/3/library/stdtypes.html#str.split">str.split()</a>.
+<pre class="brush: python">
+"asd,dfg,asd".split(",") == ["asd", "dfg", "asd"]
+    </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Мені потрібна деяка допомога, щоб продовжити.
+        I need some help to proceed with the mission
+    </div>
+    <div class="answer">
+        Для цієї місії використати зручний тип даних - <a href="http://docs.python.org/2/library/stdtypes.html#set">множина</a>.
+<pre class="brush: python">
+a = set([1, 2, 3])
+b = set([1, 2])
+
+a.intersection(b) == {1, 2} # або просто a & b
+    </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Я на половині шляху. Потрібна підказка!
+    </div>
+    <div class="answer">
+        Не забудь відсортувати результат об'єднання.
+<pre class="brush: python">
+result = ["one", "two", "three"]
+sorted(result) == ["one", "three", "two"]
+result = sorted(result) # або result.sort()
+    </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Я застряг. Потрібна маленька підказка.
+    </div>
+    <div class="answer">
+        Тобі буде корисним метод рядків <a href="http://docs.python.org/2/library/stdtypes.html#str.join">str.join()</a>.
+<pre class="brush: python">
+",".join(["a", "b", "c"]) == "a,b,c"
+    </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        То як має виглядати моє остаточне рішення?
+    </div>
+    <div class="answer">
+        Ось воно:
+<br>
+<br>
+        <pre class="brush: python">
+def checkio(first: str, second: str) -> str:
+
+    first = set(first.split(","))
+    second = set(second.split(","))
+
+    return ",".join(sorted(first & second))
+        </pre>
+        Є багато інших розв'язків цієї місії, які ти зможеш побачити коли твій
+        код успішно пройде всі тести. Наприклад:
+        <br>
+        <br>
+        <pre class="brush: python">
+checkio=lambda f,s,c=lambda x:set(x.split(",")):",".join(sorted(c(f)&c(s)))            
+        </pre>
+        Цей розв'язок робить те ж саме, але в один рядок із використанням двох
+        lambda виразів.
+        І це інший так званий ванлайнер:
+        <br>
+        <br>
+        <pre class="brush: python">
+def checkio(first: str, second: str) -> str:
+return ",".join(sorted(set(first.split(",")).\
+                       intersection(set(second.split(",")))))
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Дякую! Тепер я знаю і розумію більше! Все працює як слід!
+    </div>
+    <div class="answer">
+        Приємно це чути!
+    </div>
+</div>
+</body>

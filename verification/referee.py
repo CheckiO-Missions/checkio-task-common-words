@@ -28,9 +28,7 @@ checkio.referee.cover_codes
 
 from checkio.signals import ON_CONNECT
 from checkio import api
-from checkio.referees.io import CheckiOReferee
-from checkio.referees import cover_codes
-from checkio.referees import checkers
+from checkio.referees.io_template import CheckiOReferee
 
 from tests import TESTS
 
@@ -39,16 +37,13 @@ api.add_listener(
     CheckiOReferee(
         tests=TESTS,
         function_name={
-            "python": "checkio",
-            "js": "commonWords"
+            "python": "checkio", # check function name!
+            "js": "commonWords"      # check function name!
         },
         cover_code={
-            'python-27': cover_codes.unwrap_args,  # or None
-            'python-3': cover_codes.unwrap_args,
-            'js-node': cover_codes.js_unwrap_args
-        },
-        # checker=None,  # checkers.float.comparison(2)
-        # add_allowed_modules=[],
-        # add_close_builtins=[],
-        # remove_allowed_modules=[]
+            'python-3': {},
+            'js-node': {
+                # "dateForZeros": True,
+            }
+        }
     ).on_ready)

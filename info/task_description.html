@@ -28,19 +28,7 @@
         <strong>Example:</strong>
     </p>
 
-{% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">commonWords('hello,world', 'hello,earth') == 'hello'
-commonWords('one,two,three', 'four,five,six') == ''
-commonWords('one,two,three',
- 'four,five,one,two,six,three') == 'one,three,two'
-</pre>
-{% else %}
-<pre class="brush: python">checkio('hello,world', 'hello,earth') == 'hello'
-checkio('one,two,three', 'four,five,six') == ''
-checkio('one,two,three',
- 'four,five,one,two,six,three') == 'one,three,two'
-</pre>
-{% endif %}
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <p class="for_info_only">

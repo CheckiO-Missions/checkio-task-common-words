@@ -4,7 +4,7 @@
         I have no idea how to start solving this mission
     </div>
     <div class="answer">
-        At first we should get words. We already know about <a href="http://docs.python.org/3/library/stdtypes.html#str.split">str.split</a>.
+        At first we should get words. We already know about <a href="http://docs.python.org/3/library/stdtypes.html#str.split">str.split()</a>.
 <pre class="brush: python">
 "asd,dfg,asd".split(",") == ["asd", "dfg", "asd"]
     </pre>
@@ -21,7 +21,7 @@
 a = set([1, 2, 3])
 b = set([1, 2])
 
-a.intersection(b) == {1, 2}
+a.intersection(b) == {1, 2} # or just a & b
     </pre>
     </div>
 </div>
@@ -43,13 +43,53 @@ result = sorted(result) # or just result.sort()
         I am stuck. I need a small hint.
     </div>
     <div class="answer">
-        <a href="http://docs.python.org/2/library/stdtypes.html#str.join">str.join</a>
+        <a href="http://docs.python.org/2/library/stdtypes.html#str.join">str.join()</a>
         is important here.
 <pre class="brush: python">
 ",".join(["a", "b", "c"]) == "a,b,c"
     </pre>
     </div>
 </div>
+<div class="question-answer">
+    <div class="question">
+        So, how my final solution should look like?
+    </div>
+    <div class="answer">
+        Here it is:
+<br>
+<br>
+        <pre class="brush: python">
+def checkio(first: str, second: str) -> str:
 
+    first = set(first.split(","))
+    second = set(second.split(","))
 
+    return ",".join(sorted(first & second))
+        </pre>
+        There are a lot of other solutions you be able to see when your code
+        passes all tests. For example:
+        <br>
+        <br>
+        <pre class="brush: python">
+checkio=lambda f,s,c=lambda x:set(x.split(",")):",".join(sorted(c(f)&c(s)))            
+        </pre>
+        This solution is doing the same, but in one line by using two lambdas.
+        The other so called oneliner:
+        <br>
+        <br>
+        <pre class="brush: python">
+def checkio(first: str, second: str) -> str:
+return ",".join(sorted(set(first.split(",")).\
+                       intersection(set(second.split(",")))))
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Thanks! I know and understand more now! Everything works fine!
+    </div>
+    <div class="answer">
+        Glad to hear it!
+    </div>
+</div>
 </body>
