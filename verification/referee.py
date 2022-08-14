@@ -37,8 +37,8 @@ api.add_listener(
     CheckiOReferee(
         tests=TESTS,
         function_name={
-            "python": "checkio", # check function name!
-            "js": "commonWords"      # check function name!
+            "python": "checkio",
+            "js": "commonWords"
         },
         cover_code={
             'python-3': {},
