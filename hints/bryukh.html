@@ -4,7 +4,7 @@
         I have no idea how to start solving this mission
     </div>
     <div class="answer">
-        At first we should get words. We already know about <a href="http://docs.python.org/3/library/stdtypes.html#str.split">str.split()</a>.
+        <p>At first we should get words. We already know about <a target="_blank" href="http://docs.python.org/3/library/stdtypes.html#str.split">str.split()</a>.</p>
 <pre class="brush: python">
 "asd,dfg,asd".split(",") == ["asd", "dfg", "asd"]
     </pre>
@@ -15,14 +15,14 @@
         I need some help to proceed with the mission
     </div>
     <div class="answer">
-        For this mission we can use the built-in tools and useful data type
-        <a href="http://docs.python.org/2/library/stdtypes.html#set">sets</a>.
-<pre class="brush: python">
+        <p>For this mission we can use the built-in tools and useful data type
+        <a target="_blank" href="http://docs.python.org/2/library/stdtypes.html#set">sets</a>.</p>
+        <pre class="brush: python">
 a = set([1, 2, 3])
 b = set([1, 2])
 
 a.intersection(b) == {1, 2} # or just a & b
-    </pre>
+        </pre>
     </div>
 </div>
 <div class="question-answer">
@@ -30,12 +30,12 @@ a.intersection(b) == {1, 2} # or just a & b
         I am gone half way through. Need help!
     </div>
     <div class="answer">
-        Don't forget to sort the result data.
-<pre class="brush: python">
+        <p>Don't forget to sort the result data.</p>
+        <pre class="brush: python">
 result = ["one", "two", "three"]
 sorted(result) == ["one", "three", "two"]
 result = sorted(result) # or just result.sort()
-    </pre>
+        </pre>
     </div>
 </div>
 <div class="question-answer">
@@ -43,11 +43,10 @@ result = sorted(result) # or just result.sort()
         I am stuck. I need a small hint.
     </div>
     <div class="answer">
-        <a href="http://docs.python.org/2/library/stdtypes.html#str.join">str.join()</a>
-        is important here.
-<pre class="brush: python">
+        <p><a target="_blank" href="http://docs.python.org/2/library/stdtypes.html#str.join">str.join()</a> is important here.</p>
+        <pre class="brush: python">
 ",".join(["a", "b", "c"]) == "a,b,c"
-    </pre>
+        </pre>
     </div>
 </div>
 <div class="question-answer">
@@ -55,33 +54,34 @@ result = sorted(result) # or just result.sort()
         So, how my final solution should look like?
     </div>
     <div class="answer">
-        Here it is:
-<br>
-<br>
-        <pre class="brush: python">
+        <p>Here it is:</p>
+        <div class="spoiler">
+            <pre class="brush: python">
 def checkio(first: str, second: str) -> str:
 
     first = set(first.split(","))
     second = set(second.split(","))
 
     return ",".join(sorted(first & second))
-        </pre>
-        There are a lot of other solutions you be able to see when your code
-        passes all tests. For example:
-        <br>
-        <br>
-        <pre class="brush: python">
+            </pre>
+        </div>
+        <p>There are a lot of other solutions you be able to see when your code
+        passes all tests. For example:</p>
+        <div class="spoiler">
+            <pre class="brush: python">
 checkio=lambda f,s,c=lambda x:set(x.split(",")):",".join(sorted(c(f)&c(s)))            
-        </pre>
-        This solution is doing the same, but in one line by using two lambdas.
-        The other so called oneliner:
-        <br>
-        <br>
-        <pre class="brush: python">
+            </pre>
+        </div>
+        <p>This solution is doing the same, but in one line by using two lambdas.
+        The other so called oneliner:</p>
+        <div class="spoiler">
+            <pre class="brush: python">
 def checkio(first: str, second: str) -> str:
+
 return ",".join(sorted(set(first.split(",")).\
                        intersection(set(second.split(",")))))
-        </pre>
+            </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">

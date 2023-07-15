@@ -21,8 +21,6 @@ TESTS = {
             "input": ["one,two,three", "four,five,one,two,six,three"],
             "answer": "one,three,two",
         },
-
-
     ],
     "Extra": [
         {
@@ -73,6 +71,5 @@ TESTS = {
                 "blubber,sausage,computer,softly,penguin,moon"],
             "answer": ""
         },
-
     ]
 }
