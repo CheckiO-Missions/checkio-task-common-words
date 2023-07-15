@@ -1,0 +1,95 @@
+<body data-author="bryukh">
+<div class="question-answer">
+    <div class="question">
+        我不知道如何开始解决这个任务
+    </div>
+    <div class="answer">
+        <p>首先，我们应该得到单词。我们已经知道<a target="_blank" href="http://docs.python.org/3/library/stdtypes.html#str.split">str.split()</a> 。</p>
+<pre class="brush: python">
+"asd,dfg,asd".split(",") == ["asd", "dfg", "asd"]
+    </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        我需要一些帮助来完成任务
+    </div>
+    <div class="answer">
+        <p>对于这个任务，我们可以使用内置的工具和有用的数据类型
+       <a target="_blank" href="http://docs.python.org/2/library/stdtypes.html#set">sets</a>.</p>
+        <pre class="brush: python">
+a = set([1, 2, 3])
+b = set([1, 2])
+
+a.intersection(b) == {1, 2} # or just a & b
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        我已经走了一半。需要帮助！
+    </div>
+    <div class="answer">
+        <p>不要忘记对结果数据进行排序。</p>
+        <pre class="brush: python">
+result = ["one", "two", "three"]
+sorted(result) == ["one", "three", "two"]
+result = sorted(result) # or just result.sort()
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        我卡住了。我需要一点提示。
+    </div>
+    <div class="answer">
+        <p><a target="_blank" href="http://docs.python.org/2/library/stdtypes.html#str.join">str.join()</a> 在这里很重要。</p>
+        <pre class="brush: python">
+",".join(["a", "b", "c"]) == "a,b,c"
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        我的最终解决方案应该是怎样的？
+    </div>
+    <div class="answer">
+        <p>就是这样：</p>
+        <div class="spoiler">
+            <pre class="brush: python">
+def checkio(first: str, second: str) -> str:
+
+    first = set(first.split(","))
+    second = set(second.split(","))
+
+    return ",".join(sorted(first & second))
+            </pre>
+        </div>
+        <p>当您的代码
+        通过所有测试。举个例子：</p>
+        <div class="spoiler">
+            <pre class="brush: python">
+checkio=lambda f,s,c=lambda x:set(x.split(",")):",".join(sorted(c(f)&c(s)))            
+            </pre>
+        </div>
+        <p>这个解决方案做了同样的事情，但是在一行中使用了两个lambdas。
+        另一种所谓的oneliner：</p>
+        <div class="spoiler">
+            <pre class="brush: python">
+def checkio(first: str, second: str) -> str:
+
+return ",".join(sorted(set(first.split(",")).\
+                       intersection(set(second.split(",")))))
+            </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        谢谢！我现在知道并理解得更多了！一切正常！
+    </div>
+    <div class="answer">
+        很高兴听到这个消息！
+    </div>
+</div>
+</body>
